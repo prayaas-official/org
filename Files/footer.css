@@ -1,0 +1,558 @@
+footer{
+    height:57vh;
+    width: 100vw !important;
+    background-image:url("../Images/footer.png");
+    display:flex;
+    margin:-7vh 0 -6px 0;
+    flex-direction:column;
+    position:relative;
+    padding-bottom: 30px;;
+}
+.footer{
+    height:50vh;
+    width:100vw;
+    display:inline-flex;
+    position:relative;
+}
+.project-prabhav img{
+    height:12vh;
+    width:14vw;
+    margin:30px 4vw;
+}
+.project-prabhav p{
+    font-size:20px;
+    font-weight:700;
+    color:white;
+    margin-left:20px;
+    margin-top:-10px;
+}
+.prabhav-social-media{
+    display:inline-flex;
+    margin:25px 20px;        
+}
+.instagram img{
+    height:4vh !important;
+    width:2vw !important;
+    margin-left:10px !important;
+    margin-top:5px !important;
+}
+.linkedin img{
+    height:3vh !important;
+    width:1.5vw !important;
+    margin-left:13px !important;
+    margin-top:7px !important;
+    border-radius:1px !important;
+}
+.instagram, .linkedin{
+    border-radius:50px;
+    border:none;
+    height:7.5vh !important;
+    width:3.5vw !important;
+    background-color: rgb(39, 45, 51);
+    display:flex;
+    align-items: center;
+    margin-right:10px !important;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.linkedin{
+    margin-left:1vw !important;
+}
+.instagram:hover, .linkedin:hover{
+    box-shadow: 0 0 15px 4px cyan;
+}
+.hr{
+    width:95vw;
+    padding-top:10px;
+    color:rgb(169, 176, 183);
+    border-top:0.1px solid rgb(44, 46, 48);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:-25px 1.5vw;
+}
+.hr p:nth-child(1){
+    margin-top:2.5vh;
+}
+.down-p{
+    margin-top:10px;
+}
+.left{
+    width:30vw;
+    height:50vh;
+    position:relative;
+}
+.left p{
+    margin-left:25px;
+}
+.about-us{
+    width:35vw;
+    height:50vh;
+    margin-left:4vw;
+    margin-top:3.5vh;
+}
+.middle{
+    width:20vw;
+    height:50vh;
+    margin-left:7vw;
+}
+.middle h2, .right h2, .about-us h2{
+    font-size:23px;
+    margin:2vh 0 3vh 0;
+    color:white;
+}
+.middle a, .about-us p{
+    color:rgb(169, 176, 183);
+    font-size:15.5px;
+    text-decoration: none;
+    font-weight: lighter;
+    position:relative;
+    margin-top:3vh !important;
+    line-height: 1.2;
+}
+.footer-mid-spacing{
+    margin-top:3vh;
+}
+.middle a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; 
+    left: 0%;
+    width: 0;
+    height: 1.5px; 
+    background-color: rgb(214, 133, 28);
+    transition: width 0.3s ease;
+}
+
+.middle a:hover::before {
+    width: 100%;
+    left:0;
+}
+.middle a:hover {
+    color: white;
+}
+.right{
+    width:35vw;
+    height:50vh;
+    font-size:16px;
+    margin-left:2vw;
+}
+.right img a{
+    width:32vw;
+    margin-left:35px;
+    margin-top:-40px;
+    display:flex;
+    flex-direction:column;
+}
+.right a:hover{
+    color:white;
+}
+.right a{
+    color:rgb(169, 176, 183);
+    text-decoration: none;
+}
+.mail-gh{
+    height:2vh;
+    width:1.3vw;
+    margin-right:20px;
+}
+.p-img{
+    height:3vh;
+    width:1.2vw;
+    margin-left:2px;
+    margin-right:15px;
+}
+.line-p2 {
+    margin-left:3vw;
+    margin-top:-10px;
+}
+.middle, .right{
+    margin-top:20px;
+}
+.right p{
+    color:rgb(169, 176, 183);
+}
+@media (max-width: 749px) and (min-width: 320px) {
+    @media (min-width:400px){
+        footer{
+            height:115vh !important;
+            width:100vw !important;
+            margin-left:0;
+        }
+        .instagram, .linkedin{
+            height:5.5vh !important;
+            width:12vw !important;
+            margin-right:10px;
+            margin-left:-2vw;
+            align-items:center;
+        }
+        .instagram img{
+            width:8vw  !important;
+            height:3.5vh  !important;
+            margin-left:2.2vw  !important;
+        }
+        .linkedin img{
+            height:2.5vh  !important;
+            width:5.5vw  !important;
+            border-radius:2px;
+            margin-left:3.3vw  !important;
+        }
+    }
+    .footer{
+        height:85vh;
+        width:100vw;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color:rgb(27, 31, 35);
+    }
+    .hr{
+        border-top-color: rgb(61, 60, 60);
+        border-top-width: 1px;
+        background-color:rgb(27, 31, 35);
+        width:100vw;
+        position:relative;
+        margin:21vh 0 0 0;
+    }
+    .about-us p, .middle a, .right a{
+        font-size:4.7vw !important;
+    }
+    .middle{
+        margin-top:7vh;
+    }
+    .left, .middle, .right{
+        width:95vw;
+        height:35vh;
+    }
+    .para-1{
+        width:90vw;
+        margin-left:2vw;
+        margin-right:2vw;
+    }
+    .project-prabhav img{
+        width:50vw;
+        height:10vh;
+        margin-left:4vw;
+    }
+    .prabhav-social-media{
+        width:70vw;
+        height:10vh;
+    }
+    .left, .middle, .about-us{
+        width:90vw;
+        height:20vh;
+    }
+    .right{
+        width:90vw;
+        height:20vh;
+        margin-left:5vw;
+        margin-top:5vh;
+    }
+    .middle, .left p{
+        margin-left: 4vw;
+    }
+    .about-us{
+        margin-top:8vh;
+    }
+    .mail-gh{
+        height:1.5vh;
+        width:5vw;
+        margin-right:20px
+    }
+}
+@media (max-width: 1050px) and (min-width: 750px)  and (min-height:1000px) {
+    footer{
+        height:60vh;
+        width:100vw !important;
+    }
+    .footer{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .hr{
+        border-top-color: rgb(61, 60, 60);
+        border-top-width: 1px;
+        background-color:rgb(27, 31, 35);
+        width:100vw;
+        position:relative;
+        margin:2vh 0 0 0;
+    }
+    .left, .middle, .right{
+        width:95vw;
+        height:35vh;
+    }
+    .para-1{
+        width:90vw;
+        margin-left:2vw;
+        margin-right:2vw;
+    }
+    .project-prabhav img{
+        width:30vw;
+        height:8vh;
+        margin-left:3vw;
+    }
+    .project-prabhav p{
+        font-size:30px;
+        margin-left:3vw !important;
+    }
+    .prabhav-social-media{
+        width:90vw;
+        height:10vh;
+        margin-top:3vh;
+    }
+    .instagram, .linkedin{
+        height:7vh !important;
+        width:9vw !important;
+        margin-right:20px;
+        align-items:center;
+    }
+    .instagram img{
+        width:6vw !important;
+        height:4.2vh !important;
+        margin:0.5vh 0 0 1.5vw !important;
+    }
+    .linkedin img{
+        height: 2.7vh !important;
+        width:4vw !important;;
+        border-radius:2px;
+        margin-left:2.7vw !important;
+    }
+    .middle, .about-us, .right{
+        height:20vh;
+    }
+    .left{
+        width:35vw;
+        height:30vh;
+    }
+    .right{
+        width:70vw;
+        margin:2vh 0 0 4vw;
+        font-size:25px;
+    }
+    .footer h2{
+        font-size:30px;
+    }
+    .middle, .left p{
+        margin-left: 3vw;
+    }
+    .about-us{
+        margin: 2vh 4vw 0 4vw;
+        width:35vw !important;
+    }
+    .about-us p{
+        width:35vw;
+        font-size:2.1vw;
+    }
+    .middle{
+        width:15vw !important;
+    }
+    .middle a{
+        font-size:2vw;
+    }
+    .about-us, .middle{
+        margin-top:1vh;
+    }
+    .footer-mid-spacing{
+        margin-top:2vh !important;
+    }
+    .mail-gh{
+        height:2vh;
+        width:4vw;
+        margin-right:20px
+    }
+}
+@media (min-width:1020px) and (max-height:800px) and (max-width:1199px) {
+    .right a{
+        font-size:14px !important;
+    }
+    .about-us p{
+        font-size:0.9em;
+    }
+    .project-prabhav img{
+        width:17vw;
+        margin-left:2vw !important;
+    }
+    .instagram, .linkedin{
+        width:4.5vw !important;
+    }
+    .instagram img{
+        width:3vw !important;
+        height:1.9em !important;
+        margin-left:0.52em !important;
+    }
+    .linkedin img{
+        width:2vw !important;
+        margin-left:0.83em !important;
+        margin-top:5px !important;
+    }
+}
+@media (max-width:1400px) and (min-width:1200px) {
+    body{
+        width:100%;
+    }
+    footer{
+        width:101% !important;
+        margin-left:0;
+        border-right:8px solid black;
+    }
+    .instagram img{
+        width:2.5vw;
+        height:4.2vh;
+        margin-left:0.8vw;
+    }
+    .linkedin img{
+        width:1.7vw;
+        margin-left:1.2vw;
+    }
+    .instagram, .linkedin{
+        width:4vw;
+    }
+    .project-prabhav img{
+        margin-left:2vw !important;
+    }
+}
+@media (max-width:400px) {
+    .left p {
+        font-size:6.5vw;
+    }
+    .right .mail-gh{
+        height:2vh;
+    }
+    .project-prabhav img{
+        margin-left:4vw;
+    }
+    .instagram{
+        margin-left:-2vw !important;
+    }
+    @media (min-width:385px){
+        footer{
+            height:120vh !important;
+        }
+        .hr{
+            margin-top:26vh;
+        }
+        .about-us p, .middle a, .right a{
+            font-size:4.7vw !important;
+        }
+        .about-us{
+            margin-top:13vh !important;
+        }
+        .middle{
+            margin-top:8vh !important;
+        }
+        .right{
+            margin-top:4vh !important;
+        }
+        .instagram, .linkedin{
+            width:14vw !important;
+            height:6.5vh !important;
+        }
+        .instagram img{
+            height:4.5vh !important;
+            width:10vw !important;
+            margin-left:2vw !important;
+        }
+        .linkedin img{
+            height:3.2vh !important;
+            width:6.5vw !important;
+            margin:1vh 0 0 4vw !important;
+        }
+    }
+    @media (min-width:360px) and (max-width:385px){
+        footer{
+            height:135vh !important;
+        }
+        .hr{
+            margin-top:40vh;
+        }
+        .about-us p, .middle a, .right a{
+            font-size:4.7vw !important;
+        }
+        .about-us{
+            margin-top:15vh !important;
+        }
+        .middle{
+            margin-top:12vh !important;
+        }
+        .right{
+            margin-top:8vh !important;
+        }
+        .instagram, .linkedin{
+            height:7vh !important;
+            width:13vw !important;
+            margin-left:-2vw;
+        }
+        .instagram img{
+            height:4vh !important;
+            width:8vw !important;
+            margin-left:2.5vw !important;
+        }
+        .linkedin img{
+            height:3vh !important;
+            width:5.5vw !important;
+            margin:1vh 0 0 4vw !important;
+        }
+    }
+    @media (max-width:359px){
+        footer{
+            height:115vh !important;
+        }
+        .hr{
+            margin-top:20vh;
+        }
+        .about-us p, .middle a, .right a{
+            font-size:4.7vw !important;
+        }
+        .about-us{
+            margin-top:10vh !important;
+        }
+        .middle{
+            margin-top:5vh !important;
+        }
+        .right{
+            margin-top:5vh !important;
+        }
+    }
+    @media (max-width:359px) and (min-width:346px){
+        .instagram, .linkedin{
+            height:6vh !important;
+            width:15vw !important;
+            margin-left:-2vw;
+        }
+        .instagram img{
+            height:4vh !important;
+            width:9.5vw !important;
+            margin-left:2.5vw !important;
+        }
+        .linkedin img{
+            height:3vh !important;
+            width:7vw !important;
+            margin-left:4.2vw !important;
+        }
+    }
+    @media (max-width:345px){
+        footer{
+            height:113vh !important;
+        }
+        .hr{
+            margin-top:19vh !important;
+        }
+        .right{
+            margin-top:3vh !important;
+        }
+        .instagram, .linkedin{
+            height:6vh !important;
+            width:15vw !important;
+            margin-left:-2vw;
+        }
+        .instagram img{
+            height:4vh !important;
+            width:11vw !important;
+            margin-left:2vw !important;
+        }
+        .linkedin img{
+            height:2.7vh !important;
+            width:7.5vw !important;
+            margin-left:4vw !important;
+        }
+    }
+}
