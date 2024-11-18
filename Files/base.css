@@ -1,7 +1,55 @@
+/* Loading Animation */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+.loading-content {
+    text-align: center;
+}
+.loading-content img {
+    width: 100px;
+    height: auto;
+}
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.dots {
+    display: inline-block;
+    position: relative;
+}
+.dots::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: dots 1.5s steps(5, end) infinite;
+    font-size: 24px; /* Same as loading-text font size */
+}
+@keyframes dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+    100% { content: '...'; }
+}
 /* Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Merriweather');
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 /*---- Header ----*/
 html,body{
@@ -9,137 +57,125 @@ html,body{
     min-height:fit-content;
     overflow-x:clip;
 }
-
-.header{
-    height: 100vh;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("../Images/organization.jpeg");
-    background-position: center;
-    background-size: cover;
-    position: relative;
+.header, .initial-header{
+    font-family: 'Space Grotesk', sans-serif;
+    height: 11.7vh;
+    width: 100vw;
+    background-color: white;
+    display: inline-flex;
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.initial-header { 
+    top: -100px !important;
+}
+.new-header {
+    font-family: 'Space Grotesk', sans-serif;
+    height: 11.7vh;
+    width: 100vw;
+    background-color: white;
+    display: inline-flex;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 1s ease-in-out;
+}
+h1, h2, .header{
+    font-family: 'DM Sans', sans-serif;
+}
+h3{
+    font-family: 'DM Sans', sans-serif;
 }
 .header img{
-    width: 150px;
-    height: 60px;
-    margin-bottom: 50px;
+    height: 8.58vh;
+    width: 16.25vw;
+    margin-left: 6.7vh;
+    margin-top: 0.85vh;
 }
-.header ul{
-  margin-top:0 !important;
-  margin-right:0.5vw !important;
+.new-header img{
+    height: 8.4vh;
+    width: 16.25vw;
+    margin-left: 3.9vh;
+    margin-top: 0.85vh;
 }
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
+a.home{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 41vw;
+    padding: auto 0;
+    position:relative;
 }
-nav img{
-    width: 50%;
+a.about-pg, .new-header a.about-pg{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 40px;
+    position:relative;
 }
-.nav-links{
-    flex: 1;
-    text-align: right;
+a.join-pg{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 40.2px;
+    position:relative;
 }
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 20px;
-    position: relative;
+.new-header a.home{
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-flex;
+    margin-left: 51.5vw;
+    padding: auto 0;
 }
-.nav-links ul li a{
-    color: white;
-    font-family: "Bebas Neue", sans-serif;
+.new-header  a.join-pg{
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-flex;
+    margin-left: 40.2px;
     text-decoration: none;
-    font-size: 30px;
+    color: rgb(0, 199, 199);
 }
-.nav-links ul li ::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: red;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li :hover::after{
-    width: 100%;
-}
-.yel a:hover{
-    color: rgb(255, 196, 0);
-}
-.text-box{
-    width: 90%;
-    color: white;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.text-box h1{
-    font-size: 180px;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 300;
-    text-align: center;
-    color: rgb(255, 208, 0);
-}
-.text-box span{
-    color:rgb(255, 0, 0);
-}
-.text-box h2{
-    font-size: 50px;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 300;
-    text-align: left;
-    margin-top: 20px;
-}
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 20px;
-    color: white;
-}
-.hero-btn{  
-    display: inline-block;
+.new-header a.join-pg:hover, .new-header a.home:hover, .new-header a.about-pg:hover{
+    color: rgb(0, 199, 199);
     text-decoration: none;
-    color: #fffffff0;
-    border: 1px solid #ff0f0f;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
 }
-.hero-btn:hover{
-    border: 1px solid red;
-    background: red;
-    transition: 1s;
-}
-
-.hero-btn1{
+.donate{
     display: inline-block;
     text-decoration: none;
     color: #fff;
     border: 1px solid #000000;
-    padding: 12px 34px;
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-size: 28px;
-    background:#ff0000;
+    font-size: 2vw;
+    background:rgb(0, 196, 196);
     position: relative;
     cursor: pointer;
     border-radius: 10px;
-    margin-bottom: 55px;
-    height: 60px;
+    height: 7vh;
+    width:10vw;
+    margin:0 0 0 3vw;
 }
-.hero-btn1:hover{
+.donate:hover{
     border: 1px solid red;
-    background: red;
+    background: rgb(0, 200, 210);
     transition: 1s;
 }
-nav .fa{
-    display: none;
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 18px auto;
+    color: rgb(0, 198, 198);
+    font-weight:900;
+    word-spacing: -1px;
+    letter-spacing:-1px;
 }
+
 #back-to-top {
     display: none;
     border-radius: 20px;

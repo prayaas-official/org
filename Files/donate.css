@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0px;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100vw !important;
+    overflow-x: hidden;
+}
+a.donate{
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: rgb(0, 199, 199);
+    text-underline-offset: 8.5px;
+    text-decoration-thickness: 2.2px;
+}
+.support {
+    margin:2vh 0 8vh 0;
+    font-size: 6vw;
+    font-family:  "Merriweather", sans-serif;
+    font-weight: 600;
+    text-decoration:5px underline;
+    text-underline-offset:1vh;
+    color: rgb(22, 31, 136);
+    text-align:center;
+}
+.payment-options {
+    background: white;
+    border: 1px solid black;
+    box-shadow: 0 0 20px 5px whitesmoke;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5vh auto 10vh auto;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin: 1vh 0;
+    cursor: pointer;
+}
+.payment-header {
+    background-color: rgb(231, 230, 230);
+    color: black;
+    width: 35vw;
+    height: 10vh;
+    margin: -4vh -2vw 0 -2vw;
+    padding-top: 1vh;
+    border: 1px solid black;
+}
+.payment-header h2 {
+    margin: 2.5vh;
+}
+.payment-option :nth-of-type(1) {
+    margin-top: 5vh !important;
+}
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle-inner {
+    width: 1.1vw;
+    height: 2.3vh;
+    position: absolute;
+    top: -4.5vh;
+    left: 16%;
+    background-color: blue;
+    border-radius: 50%;
+    display: none;
+}
+.payment-fields {
+    display: none;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    gap: 2vh 1vw;
+}
+#upi-fields img {
+    width: 10vw; 
+    height: auto;
+    margin: 0 5px; 
+    display: block;
+}
+#upi-fields .paytm img, #upi-fields .phone-pay img {
+    margin: -4vh -1.7vw;
+    width: 14vw !important;
+}
+.payment-fields h3 {
+    margin: 2vh 1vw;
+    font-weight: 600;
+    color: gray;
+    font-size: 1.2vw;
+}
+.bhim-upi, .paytm, .phone-pay, .google-pay {
+    width: 40%;
+    height: 12vh;
+    position: relative;
+    margin: 2vh 1vw;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.payment-option.selected .circle-inner {
+    display: block;
+}
+.payment-option.selected {
+    background-color: #f0f8ff;
+}
+.circle.selected {
+    border-color: blue;
+}
+.circle-inner.selected {
+    display: block;
+}
+.sbi, .kotak, .axis, .hdfc {
+    width: 40%;
+    height: 12vh;
+    position: relative;
+    margin: 2vh 1vw;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+#netbanking-fields img {
+    width: 10vw; 
+    height: auto;
+    margin: 0 5px; 
+    display: block;
+}
+#netbanking-fields .sbi img{
+    width:9vw;
+    margin:0 0.8vw;
+}
+#netbanking-fields .axis img {
+    width:14vw;
+    margin:-5vh -1.5vw;
+}
+#netbanking-fields .hdfc img{
+    margin:-0.5vh 0.5vw;
+}
+.submit{
+    display:block;
+    height:8vh;
+    width:25vw;
+    margin:5vh 2vw 0 2vw;
+    background-color:rgb(227, 227, 227);
+    opacity:0.8;
+    border-radius:2vw;
+    font-size:1.6vw;
+    font-weight:550;
+    border:1.5px solid black;
+    cursor:pointer;
+}
+.submit:hover{
+    background-color:rgb(210,210,210);
+}
+.input{
+    width: 40%;
+    height: 12vh;
+    position: relative;
+    margin: 2vh 1vw 0 1vw;
+    display: inline-block;
+    vertical-align: middle;
+}
+#card-fields h2{
+    font-size:1.1vw;
+    color:grey;
+}
+#card-fields input[type="text"] {
+    height:5vh;
+    width:12vw;
+}
+.troubles{
+    font-size:1.2vw;
+    text-align:center;
+    margin-top:4vh;
+}
+#upiErrorMessage, #errorMessage, #cardErrorMessage{
+    color: red;
+}
+@media (min-width:320px) and (max-width:749px) {
+    .support{
+        font-size:7vw;
+        text-decoration: 2px underline;
+        text-underline-offset: 4px;
+        margin:2vh auto 0 auto;
+    }
+    .payment-options{
+        width:80vw;
+        border-radius:4vw;
+        margin:5vh auto 5vh auto;
+    }
+    .payment-header{
+        width:90vw;
+        margin: -4vh -2vw 0 -5vw;
+    }
+    .payment-header .choose{
+        font-size:6.5vw;
+        margin:4vh 3vw;
+    }
+    .payment-option{
+        font-size:5.5vw;
+    }
+    .circle-inner{
+        width:3.5vw;
+        height:1.6vh;
+        top:-4.65vh !important;
+        margin-left:-0.08px;
+    }
+    .payment-fields button{
+        height:10vh;
+        width:37vw;
+    }
+    .payment-fields h3{
+        font-size:5vw;
+    }
+    #upi-fields button img {
+        width:36vw !important;
+        margin:0.2vh 2vw 2vh -1vw !important;
+    }
+    #upi-fields .phone-pay img{
+        width:44vw !important;
+        margin:-1.5vh 2vw 0 -5.5vw !important;
+    }
+    #upi-fields .paytm img{
+        width:62vw !important;
+        margin:-4.5vh -14vw !important;
+    }
+    #upi-fields .google-pay img{
+        width:42vw !important;
+        margin:-0.2vh 2vw 0 -4vw !important;
+    }
+    #upi-fields .submit, #netbanking-fields .submit, #card-fields .submit {
+        height:5vh;
+        width:70vw;
+        border-radius:7vw;
+        font-size:5vw;
+        margin:5vh auto 0 5vw;
+    }
+    #netbanking-fields img{
+        width:30vw !important;
+    }
+    #netbanking-fields .axis img{
+        width:42vw !important;
+        margin-left:-4vw;
+    }
+    #netbanking-fields .hdfc img{
+        width:32vw !important;
+        margin-left:1vw;
+    }
+    #netbanking-fields .kotak img{
+        width:32vw !important;
+        margin-left:0vw;
+    }
+    .input h2{
+        font-size:4.5vw !important;
+    }
+    .input input{
+        width:35vw !important;
+        height:5vh !important;
+        border:1px solid black;
+        font-size:4.5vw;
+    }
+    input[name="expiry_date"]{
+        font-size:3.5vw !important;
+    }
+    .input{
+        margin-right:6vw;
+        margin-bottom:-2vh !important;
+    }
+    .troubles {
+        font-size:5vw;
+    }
+    footer {
+        margin-top:5vh !important;
+    }
+}
