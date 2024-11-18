@@ -26,6 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadExternalHTML();
 });
+// Header Insertion
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('Header script loaded');
+    
+    function loadExternalHTML() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading external HTML:', error));
+    }
+
+    loadExternalHTML();
+});
 // Footer Insertion
 document.addEventListener('DOMContentLoaded', function () {
     console.log('Footer script loaded');

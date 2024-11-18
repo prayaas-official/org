@@ -14,13 +14,6 @@ body {
     width: 100vw !important;
     overflow-x: hidden;
 }
-a.donate{
-    text-decoration: underline;
-    text-decoration-color: white;
-    color: rgb(0, 199, 199);
-    text-underline-offset: 8.5px;
-    text-decoration-thickness: 2.2px;
-}
 .initial-header a.join-pg::before, .initial-header a.home::before, .initial-header a.about-pg::before,
 .header:not(.new-header) a.join-pg::before, .header:not(.new-header) a.home::before,
 .header:not(.new-header) a.about-pg::before {
@@ -49,8 +42,16 @@ a.join-pg:link, a.join-pg:visited, a.home:link, a.home:visited, a.about-pg:link,
     text-decoration: none;
     font-weight:500;
 }
+.donate{
+    font-weight: 600 !important;
+    font-size: 1.5vw !important;
+    font-family: "Arial", sans-serif !important;
+    text-decoration: 2px solid underline white !important;
+    text-underline-offset: 4px;
+
+}
 .support {
-    margin:2vh 0 8vh 0;
+    margin:5vh 0 8vh 0;
     font-size: 4vw;
     font-family:  "Merriweather", sans-serif;
     font-weight: 600;
