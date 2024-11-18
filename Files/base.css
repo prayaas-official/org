@@ -148,11 +148,13 @@ a.join-pg{
 .donate{
     display: inline-block;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
     color: #fff;
     border: 2px solid rgb(0, 174, 174);
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-size: 2vw;
+    font-family: "Merriweather", sans-serif;
+    font-weight: 550;
+    font-size: 1.5vw;
     background:rgb(0, 200, 200);
     position: relative;
     cursor: pointer;
@@ -166,12 +168,12 @@ a.join-pg{
     background: rgb(0, 200, 210);
     transition: 0.2s;
 }
-h1{
+#contact-form-h2, h1{
     text-align: center;
-    font-size: 30px;
+    font-size: 4vw;
     margin: 18px auto;
     color: rgb(0, 198, 198);
-    font-weight:900;
+    font-weight:600;
     word-spacing: -1px;
     letter-spacing:-1px;
 }

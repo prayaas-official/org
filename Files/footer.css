@@ -14,10 +14,13 @@ footer{
     display:inline-flex;
     position:relative;
 }
+.project-prabhav{
+    margin:3vh 0 0 0;
+}
 .project-prabhav img{
-    height:25vh;
-    width:auto;
-    margin:5vh 4vw 0 4vw;
+    height:auto;
+    width:13vw;
+    margin:0 4vw 0 4vw;
 }
 .project-prabhav p{
     font-size:20px;
@@ -28,7 +31,7 @@ footer{
 }
 .prabhav-social-media{
     display:inline-flex;
-    margin:2vh 20px;        
+    margin:2vh 2vw;        
 }
 .instagram img{
     height:4vh !important;
@@ -99,6 +102,7 @@ footer{
     font-size:23px;
     margin:2vh 0 3vh 0;
     color:white;
+    text-align: left;
 }
 .middle a, .about-us p{
     color:rgb(169, 176, 183);
@@ -110,7 +114,7 @@ footer{
     line-height: 1.2;
 }
 .footer-mid-spacing{
-    margin-top:3vh;
+    margin-top:-5px !important;
 }
 .middle a::before {
     content: '';
