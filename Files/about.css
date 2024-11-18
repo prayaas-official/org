@@ -1,0 +1,34 @@
+a.about-pg{
+    font-weight: 600;
+    text-decoration: underline;
+    color: rgb(0, 199, 199);
+    text-underline-offset: 8.5px;
+    text-decoration-thickness: 2.2px;
+}
+a.home, .new-header a.home, a.join-pg {
+    font-weight: 500;
+}
+.initial-header a.join-pg::before, .initial-header a.home::before,
+.header:not(.new-header) a.join-pg::before, .header:not(.new-header) a.home::before {
+    content: '';
+    position: absolute;
+    bottom: -6px; 
+    left: 50%;
+    width: 0;
+    height: 2px; 
+    background-color: rgb(0, 196, 196);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+.initial-header a.join-pg:hover::before, .initial-header a.home:hover::before, 
+.header:not(.new-header) a.join-pg:hover::before, .header:not(.new-header) a.home:hover::before {
+    width: 100%;
+    left: 0;
+}
+.initial-header a.join-pg:hover, .initial-header a.home:hover,
+.header:not(.new-header) a.join-pg:hover, .header:not(.new-header) a.home:hover {
+    color: rgb(0, 199, 199);
+}
+a.join-pg:link, a.join-pg:visited, a.home:link, a.home:visited{
+    color: grey;
+    text-decoration: none;
+}

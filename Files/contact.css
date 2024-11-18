@@ -1,0 +1,99 @@
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(26, 25, 25, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border: 5px double black;
+    flex-direction: column;
+    align-items: center;
+}
+h2 {
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+}
+h3 {
+    font-size: 30px; 
+    font-family: Arial; 
+    color: black;
+    margin: 10px 0 5px;
+}
+form {
+    width: 100%;
+}
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+form textarea {
+    resize:vertical;
+}
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    height: 40px;
+}
+form input[type="submit"]:hover {
+    background-color: #333;
+}
+.phone {
+    display: flex;
+}
+#CountryCode {
+    display: flex;
+    width: auto; 
+    height:40px;
+    margin-right: 10px;
+
+}
+/* Media query for screens smaller than 749px */
+@media (min-width:320px) and (max-width:749px) {
+    .contact-form{
+        width:90vw;
+    }
+    form {
+        padding: 10px;
+    }
+    form input,
+    form textarea {
+        padding: 8px;
+        font-size: 16px;
+    }
+    .phone {
+        display: flex;
+    }
+    select[id="CountryCode"]{
+        display: flex;
+        width: 25vw !important; 
+        height:40px;
+        margin-left: 1px;
+    }
+    .pg-title h1{
+        color:black;
+    }
+    /* Additional changes for mobile layout */
+    h3 {
+        font-size: 25px;
+    }
+    .contact-form {
+        padding: 10px;
+    }
+    
+}

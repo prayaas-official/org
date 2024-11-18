@@ -1,0 +1,204 @@
+/* Loading Animation */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+.loading-content {
+    text-align: center;
+}
+.loading-content img {
+    width: 100px;
+    height: auto;
+}
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.dots {
+    display: inline-block;
+    position: relative;
+}
+.dots::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: dots 1.5s steps(5, end) infinite;
+    font-size: 24px; /* Same as loading-text font size */
+}
+@keyframes dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+    100% { content: '...'; }
+}
+/* Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather');
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/*---- Header ----*/
+html,body{
+    width:100%;
+    min-height:fit-content;
+    overflow-x:clip;
+}
+.header, .initial-header{
+    font-family: 'Space Grotesk', sans-serif;
+    height: 11.7vh;
+    width: 100vw;
+    background-color: white;
+    display: inline-flex;
+    box-shadow: 0 20px 20px 5px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.initial-header { 
+    top: -100px !important;
+}
+.new-header {
+    font-family: 'Space Grotesk', sans-serif;
+    height: 11.7vh;
+    width: 100vw;
+    background-color: white;
+    display: inline-flex;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: top 1s ease-in-out;
+}
+h1, h2, .header{
+    font-family: 'DM Sans', sans-serif;
+}
+h3{
+    font-family: 'DM Sans', sans-serif;
+}
+.header img{
+    height: 8.58vh;
+    width: 16.25vw;
+    margin-left: 6.7vh;
+    margin-top: 0.85vh;
+}
+.new-header img{
+    height: 8.4vh;
+    width: 16.25vw;
+    margin-left: 3.9vh;
+    margin-top: 0.85vh;
+}
+a.home{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 41vw;
+    padding: auto 0;
+    position:relative;
+}
+a.about-pg, .new-header a.about-pg{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 40px;
+    position:relative;
+}
+a.join-pg{
+    font-size: 1.5vw;
+    display: inline-flex;
+    margin-left: 40.2px;
+    position:relative;
+}
+.new-header a.home{
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-flex;
+    margin-left: 51.5vw;
+    padding: auto 0;
+}
+.new-header  a.join-pg{
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-flex;
+    margin-left: 40.2px;
+    text-decoration: none;
+    color: rgb(0, 199, 199);
+}
+.new-header a.join-pg:hover, .new-header a.home:hover, .new-header a.about-pg:hover{
+    color: rgb(0, 199, 199);
+    text-decoration: none;
+}
+.donate{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgb(0, 174, 174);
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    background:rgb(0, 200, 200);
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 7vh;
+    width:10vw;
+    margin:0 0 0 3vw;
+}
+.donate:hover{
+    border:2px solid rgb(0,184,184);
+    background: rgb(0, 200, 210);
+    transition: 0.2s;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+    margin: 18px auto;
+    color: rgb(0, 198, 198);
+    font-weight:900;
+    word-spacing: -1px;
+    letter-spacing:-1px;
+}
+
+#back-to-top {
+    display: none;
+    border-radius: 20px;
+    height:7vh;
+    width:3vw;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color:rgb(0, 177, 193);
+    cursor: pointer;
+}
+#back-to-top:hover {
+    background-image:url("../Images/footer-button.png");
+}
+#back-to-top img{
+    display:flex;
+    align-items: center;
+    margin-top:0;
+    margin-left:-8.5px;
+    height: 2vh;
+    width:auto;
+}

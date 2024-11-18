@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Project Prabhav by making a donation today. Your contribution makes a difference in our community initiatives.">
+    <meta name="keywords" content="donate, charity, Project Prabhav, support, UPI, net banking, credit card">
+    
+    <meta property="og:title" content="Donate Now | Project Prabhav">
+    <meta property="og:description" content="Make a difference by donating to Project Prabhav. Support our mission with your contribution.">
+    <meta property="og:image" content="../Images/logo.jpeg">
+    <meta property="og:url" content="https://yourwebsite.com/donate.html">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Donate Now | Project Prabhav">
+    <meta name="twitter:description" content="Support Project Prabhav by making a donation today. Your contribution makes a difference in our community initiatives.">
+    <meta name="twitter:image" content="../Images/logo.jpeg">
+
+    <title>Donate Now | Team Prayas</title>
+    <link rel="icon" type="image/x-icon" href="../Images/icon.png">
+    <link rel="stylesheet" href="donate.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="base.css">
+
+    <script src="base.js"></script>
+    <script src="donate.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Project Prabhav - Intervention Program",
+      "url": "https://project-prabhav.github.io/Project-Prabhav/Files/Donate.html",
+      "logo": "https://project-prabhav.github.io/Project-Prabhav/Images/logo.jpeg",
+      "description": "Support Project Prabhav by making a donation today. Your contribution makes a difference in our community initiatives.",
+      "sameAs": [
+        "https://www.instagram.com/_projectprabhav/",
+        "https://www.linkedin.com/company/project-%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%AD%E0%A4%BE%E0%A4%B5/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "email": "office.projectprabhav@gmail.com",
+          "contactType": "Customer Service",
+          "description": "Primary contact for inquiries about the Intervention Program."
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <div class="header" id="header">
+        <a href="prayas-home.html"><img title="Team Prayas" id="header-img" src="../Images/header-logo.png" alt="Team Prayas" loading="lazy" style="color: transparent;"></a>
+        <a class="home" href="prayas-home.html">Home</a>
+        <a class="about-pg" href="about.html">About</a>
+        <a class="join-pg" href="join.html">Get Involved</a>
+        <a href="Donate.html"><button class="donate">Donate</button></a>
+    </div>
+    <br><br><br>
+
+<div class="loading-overlay" id="loadingOverlay"></div>
+<div class="org-content">
+    <h2 class="support">Support Our Organization</h2>
+    <div class="payment-options">
+        <div class="payment-header">
+            <h2 class="choose">Choose a payment option:</h2>
+        </div>
+
+        <div class="payment-option" onclick="showPayment('upi')">
+            <div class="circle"><div class="circle-inner"></div></div>
+            <h3>UPI / BHIM</h3>
+        </div>
+        <div class="payment-fields" id="upi-fields">
+            <form method="POST">
+                <h3>Select your UPI app</h3>
+                <button class="bhim-upi" onclick="selectUPI('BHIM')">
+                    <img src="../Images/BHIM.png" alt="BHIM">
+                </button>
+                <button class="phone-pay" onclick="selectUPI('PhonePe')">
+                    <img src="../Images/PhonePe.png" alt="PhonePe">
+                </button>
+                <button class="paytm" onclick="selectUPI('Paytm')">
+                    <img src="../Images/Paytm.png" alt="Paytm">
+                </button>
+                <button class="google-pay" onclick="selectUPI('GooglePay')">
+                    <img src="../Images/GooglePay.png" alt="GooglePay">
+                </button>
+                
+                <p id="upiMessage"></p>
+                <p id="upiErrorMessage"></p>
+                
+                <button type="submit" class="submit" onclick="showUPIErrorMessage(event)">
+                    Proceed with Payment
+                </button>
+            </form>
+        </div>
+
+        <div class="payment-option" onclick="showPayment('netbanking')">
+            <div class="circle"><div class="circle-inner"></div></div>
+            <h3>Net Banking</h3>
+        </div>
+        <div class="payment-fields" id="netbanking-fields">
+            <form method="POST">
+                <h3>Select your Bank</h3>
+                <button type="button" class="sbi" onclick="selectBank('SBI')">
+                    <img src="../Images/SBI.png" alt="SBI">
+                </button>
+                <button type="button" class="kotak" onclick="selectBank('Kotak')">
+                    <img src="../Images/Kotak.png" alt="Kotak">
+                </button>
+                <button type="button" class="axis" onclick="selectBank('Axis')">
+                    <img src="../Images/Axis.png" alt="Axis">
+                </button>
+                <button type="button" class="hdfc" onclick="selectBank('HDFC')">
+                    <img src="../Images/HDFC.png" alt="HDFC">
+                </button>
+
+                <!-- Empty <p> elements to hold messages -->
+                <p id="bankMessage"></p>
+                <p id="errorMessage"></p>
+                
+                <button type="submit" class="submit"  onclick="showErrorMessage(event)">Proceed with Payment</button>
+            </form>
+        </div>
+
+        <div class="payment-option" onclick="showPayment('card')">
+            <div class="circle"><div class="circle-inner"></div></div>
+            <h3>Credit/Debit Card</h3>
+        </div>
+        <div class="payment-fields" id="card-fields">
+            <form method="POST">
+                <div class="input">
+                    <h2>Card Number *</h2>
+                    <input type="text" maxlength="29" name="card_number" placeholder="Card Number" required oninput="formatCardNumber(this)"  onfocus="hideErrorMessage()">
+                </div>
+                <div class="input">
+                    <h2>Expiry Date *</h2>
+                    <input type="text" maxlength="7" pattern="\d{2}/\d{2}" name="expiry_date" placeholder="Expiry Date (MM/YY)" required oninput="formatExpiryDate(this)"  onfocus="hideErrorMessage()">
+                </div>
+                <div class="input">
+                    <h2>CVV *</h2>
+                    <input type="text" maxlength="3" pattern="\d{3}"  name="cvv" placeholder="CVV" required oninput="this.value = this.value.replace(/[^0-9]/g, '')"  onfocus="hideErrorMessage()">
+                </div>
+                <br>
+                <p id="cardErrorMessage"></p>
+                <button type="submit" class="submit" onclick="showCardErrorMessage(event)">Proceed with Payment</button>
+            </form>
+        </div>
+        <h3 class="troubles">Having Troubles? <a href="mailto:office.projectprabhav@gmail.com">Contact Us</a></h3>
+    </div>
+</div>
+<footer id="footer"></footer>
+<button id="back-to-top"><img src="../Images/up.png" alt="up"></button>
+<div id="mob-menu"></div>  
+
+</body>
+</html>
