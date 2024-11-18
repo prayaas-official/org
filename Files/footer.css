@@ -119,10 +119,9 @@ footer{
     left: 0%;
     width: 0;
     height: 1.5px; 
-    background-color: rgb(214, 133, 28);
+    background-color: rgb(0, 196, 196);
     transition: width 0.3s ease;
 }
-
 .middle a:hover::before {
     width: 100%;
     left:0;
